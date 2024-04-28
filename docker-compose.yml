@@ -6,10 +6,10 @@ services:
     build: .
     restart: always
     ports:
-      - 80:80
-      - 443:443
+      - 82:80
+      - 444:443
     environment:
-      WORDPRESS_DB_HOST: wp
+      WORDPRESS_DB_HOST: db  
       WORDPRESS_DB_USER: lfelipeapo
       WORDPRESS_DB_PASSWORD: L£57w80Uli4n
       WORDPRESS_DB_NAME: teste
@@ -23,7 +23,7 @@ services:
       MYSQL_DATABASE: teste
       MYSQL_USER: lfelipeapo
       MYSQL_PASSWORD: L£57w80Uli4n
-      MYSQL_RANDOM_ROOT_PASSWORD: '1'
+      # MYSQL_RANDOM_ROOT_PASSWORD: '1'
     volumes:
       - db:/var/lib/mysql
 
